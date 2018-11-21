@@ -1,0 +1,6 @@
+<launch>
+	<node name="arduino" pkg="ros_arduino_python" type="arduino_node.py" output="screen">
+		<rosparam file="$(find robot_bringup)/config/arduino.yaml" command="load" />
+	</node>
+	<include file="${find openni2_launch/launch/openni2.launch}"/>
+</launch>
